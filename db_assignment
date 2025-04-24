@@ -28,3 +28,35 @@ select * from students;
 |          8 | vihaan | Male   | vihaan@gmail.com |
 +------------+--------+--------+------------------+
 
+CREATE TABLE genres(
+genre_id INT PRIMARY KEY AUTO_INCREMENT,
+genre_name VARCHAR(50)
+);
+
+INSERT INTO genres (genre_name) VALUES 
+('Action'),
+('Adventure'),
+('Comedy'),
+('Drama'),
+('Fantasy'),
+('Horror'),
+('Mystery'),
+('Love'),
+('Thriller');
+
+select * from genres;
++----------+------------+
+| genre_id | genre_name |
++----------+------------+
+|        1 | Action     |
+|        2 | Adventure  |
+|        3 | Comedy     |
+|        4 | Drama      |
+|        5 | Fantasy    |
+|        6 | Horror     |
+|        7 | Mystery    |
+|        8 | Love       |
+|        9 | Thriller   |
++----------+------------+
+
+
