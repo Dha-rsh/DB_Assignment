@@ -5,3 +5,76 @@ CREATE TABLE stall (
     quantity INT
 );
 
+INSERT INTO stall VALUES
+(1, 'Burger', 59.99, 2),
+(2, 'Pizza', 149.50, 1),
+(3, 'Fries', 49.00, 3),
+(4, 'Soda', 25.00, 2),
+(5, 'Ice Cream', 60.75, 1),
+(6, 'Burger', 59.99, 1),
+(7, 'Pizza', 149.50, 2),
+(8, 'Fries', 49.00, 2),
+(9, 'Soda', 25.00, 1),
+(10, 'Ice Cream', 60.75, 3),
+(11, 'Burger', 59.99, 2),
+(12, 'Pizza', 149.50, 1),
+(13, 'Fries', 49.00, 1),
+(14, 'Soda', 25.00, 2),
+(15, 'Ice Cream', 60.75, 2),
+(16, 'Burger', 59.99, 3),
+(17, 'Pizza', 149.50, 2),
+(18, 'Fries', 49.00, 2),
+(19, 'Soda', 25.00, 3),
+(20, 'Ice Cream', 60.75, 1),
+(21, 'Burger', 59.99, 1),
+(22, 'Pizza', 149.50, 1),
+(23, 'Fries', 49.00, 2),
+(24, 'Soda', 25.00, 2),
+(25, 'Ice Cream', 60.75, 2);
+
+
+SELECT item_name AS items, SUM(price) AS totalprice 
+FROM stall 
+GROUP BY item_name;
++-----------+------------+
+| items     | totalprice |
++-----------+------------+
+| Burger    |     299.95 |
+| Fries     |     245.00 |
+| Ice Cream |     303.75 |
+| Pizza     |     747.50 |
+| Soda      |     125.00 |
++-----------+------------+
+
+SELECT item_name AS items, 
+SUM(price * quantity) AS total_sales 
+FROM stall 
+GROUP BY item_name;
+
++-----------+-------------+
+| items     | total_sales |
++-----------+-------------+
+| Burger    |      779.87 |
+| Fries     |      490.00 |
+| Ice Cream |      911.25 |
+| Pizza     |     1943.50 |
+| Soda      |      300.00 |
++-----------+-------------+
+
+SELECT item_name AS items, price,
+COUNT(quantity) As orders,
+SUM(quantity) As total_quantity,
+SUM(price * quantity) AS total_sales
+FROM stall 
+GROUP BY items,price;
+
++-----------+--------+--------+----------------+-------------+
+| items     | price  | orders | total_quantity | total_sales |
++-----------+--------+--------+----------------+-------------+
+| Burger    |  59.99 |      5 |             13 |      779.87 |
+| Fries     |  49.00 |      5 |             10 |      490.00 |
+| Ice Cream |  60.75 |      5 |             15 |      911.25 |
+| Pizza     | 149.50 |      5 |             13 |     1943.50 |
+| Soda      |  25.00 |      5 |             12 |      300.00 |
++-----------+--------+--------+----------------+-------------+
+
