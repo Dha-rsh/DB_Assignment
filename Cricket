@@ -1,1 +1,38 @@
+CREATE TABLE cricket(
+player_id INT PRIMARY KEY,
+player_name VARCHAR(100),
+team_name VARCHAR(100),
+role VARCHAR(100),
+captain_id INT
+);
+
+INSERT INTO cricket (player_id, player_name, team_name, role, captain_id) VALUES
+
+(18, 'Virat Kohli', 'RCB', 'Batsman', NULL), 
+(17, 'AB de Villiers', 'RCB', 'Batsman', 18),  
+(45, 'Rohit Sharma', 'MI', 'Batsman', NULL), 
+(55, 'Kieron Pollard', 'MI', 'All-rounder', 45),  
+(7, 'MS Dhoni', 'CSK', 'Wicketkeeper-Batsman', NULL),  
+(8, 'Ravindra Jadeja', 'CSK', 'All-rounder', 7),  
+(42, 'Shikhar Dhawan', 'DC', 'Batsman', NULL),   
+(33, 'Hardik Pandya', 'MI', 'All-rounder', 45),  
+(10, 'Prithvi Shaw', 'DC', 'Batsman', 42),  
+(93, 'Jasprit Bumrah', 'MI', 'Bowler', 45),  
+(3, 'Dwayne Bravo', 'CSK', 'All-rounder', 7); 
+
++-----------+-----------------+-----------+----------------------+------------+----------------+
+| player_id | player_name     | team_name | role                 | captain_id | captain_name   |
++-----------+-----------------+-----------+----------------------+------------+----------------+
+|         3 | Dwayne Bravo    | CSK       | All-rounder          |          7 | MS Dhoni       |
+|         7 | MS Dhoni        | CSK       | Wicketkeeper-Batsman |       NULL | NULL           |
+|         8 | Ravindra Jadeja | CSK       | All-rounder          |          7 | MS Dhoni       |
+|        10 | Prithvi Shaw    | DC        | Batsman              |         42 | Shikhar Dhawan |
+|        17 | AB de Villiers  | RCB       | Batsman              |         18 | Virat Kohli    |
+|        18 | Virat Kohli     | RCB       | Batsman              |       NULL | NULL           |
+|        33 | Hardik Pandya   | MI        | All-rounder          |         45 | Rohit Sharma   |
+|        42 | Shikhar Dhawan  | DC        | Batsman              |       NULL | NULL           |
+|        45 | Rohit Sharma    | MI        | Batsman              |       NULL | NULL           |
+|        55 | Kieron Pollard  | MI        | All-rounder          |         45 | Rohit Sharma   |
+|        93 | Jasprit Bumrah  | MI        | Bowler               |         45 | Rohit Sharma   |
++-----------+-----------------+-----------+----------------------+------------+----------------+
 
