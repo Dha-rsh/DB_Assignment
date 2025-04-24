@@ -1,0 +1,30 @@
+CREATE TABLE students(
+student_id INT PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(100),
+gender ENUM('Male','Female','Other'),
+contact_info VARCHAR(255)
+);
+INSERT INTO students(name,gender,contact_info) VALUES
+ ('alagu','Female','alagu@gmail.com'),
+ ('priya','Female','priya@gmail.com'),
+ ('dharsh','Female','dharsh@gmail.com'),
+ ('pavi','Female','pavi@gmail.com'),
+ ('mani','Male','mani@gmail.com'),
+ ('bala','Male','bala@gmail.com'),
+ ('sundar','Male','sundar@gmail.com'),
+ ('vihaan','Male','vihaan@gmail.com');
+
+select * from students;
++------------+--------+--------+------------------+
+| student_id | name   | gender | contact_info     |
++------------+--------+--------+------------------+
+|          1 | alagu  | Female | alagu@gmail.com  |
+|          2 | priya  | Female | priya@gmail.com  |
+|          3 | dharsh | Female | dharsh@gmail.com |
+|          4 | pavi   | Female | pavi@gmail.com   |
+|          5 | mani   | Male   | mani@gmail.com   |
+|          6 | bala   | Male   | bala@gmail.com   |
+|          7 | sundar | Male   | sundar@gmail.com |
+|          8 | vihaan | Male   | vihaan@gmail.com |
++------------+--------+--------+------------------+
+
