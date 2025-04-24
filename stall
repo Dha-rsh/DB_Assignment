@@ -1,1 +1,7 @@
+CREATE TABLE stall (
+    order_id INT PRIMARY KEY,
+    item_name VARCHAR(50),
+    price DECIMAL(6,2),
+    quantity INT
+);
 
